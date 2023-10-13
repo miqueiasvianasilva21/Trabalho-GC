@@ -10,5 +10,6 @@ double kmParaMetros(double km) {
 
 int main(){
     printf("%d",metrosParaKm(10));
+    printf("%d",kmParaMetros(1000));
     return 0;
 }
