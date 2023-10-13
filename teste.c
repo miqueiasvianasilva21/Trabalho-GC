@@ -47,7 +47,7 @@ void testKmParaMetros() {
     }
 }
 
-int main() {
+int teste() {
     testMetrosParaKm();
     testKmParaMetros();
 
