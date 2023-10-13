@@ -1,15 +1,9 @@
-#include <stdio.h>
+#include "funcoes.h"
 
-
-double kgToLbs(double kg) {
-    return kg * 2.205;
+double metrosParaKm(double metros) {
+    return metros / 1000.0;
 }
 
-
-double lbsToKg(double lbs) {
-    return lbs / 2.205;
-}
-
-int main(){
-    printf("%f",kgToLbs(10));
+double kmParaMetros(double km) {
+    return km * 1000.0;
 }

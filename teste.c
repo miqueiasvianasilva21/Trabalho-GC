@@ -1,27 +1,55 @@
-#include <stdarg.h>
-#include <stddef.h>
-#include <setjmp.h>
-#include <cmocka.h>
+#include <stdio.h>
+#include "funcoes.h"
 
-// Inclua as declarações das funções a serem testadas
-#include "funcoes.c"
+void testMetrosParaKm() {
+    double resultado = metrosParaKm(1000.0);
+    if (resultado == 1.0) {
+        printf("Teste de metrosParaKm(1000.0) passou.\n");
+    } else {
+        printf("Teste de metrosParaKm(1000.0) falhou. Resultado: %lf\n", resultado);
+    }
 
-// Função de inicialização do teste
-int test_kgToLbs(void **state) {
-    assert_float_equal(kgToLbs(10), 22.05000, 0.001);  // Tolerância de 0.001
-    return 0;
+    resultado = metrosParaKm(2000.0);
+    if (resultado == 2.0) {
+        printf("Teste de metrosParaKm(2000.0) passou.\n");
+    } else {
+        printf("Teste de metrosParaKm(2000.0) falhou. Resultado: %lf\n", resultado);
+    }
+
+    resultado = metrosParaKm(1500.0);
+    if (resultado == 1.5) {
+        printf("Teste de metrosParaKm(1500.0) passou.\n");
+    } else {
+        printf("Teste de metrosParaKm(1500.0) falhou. Resultado: %lf\n", resultado);
+    }
 }
 
-int test_lbsToKg(void **state) {
-    assert_float_equal(lbsToKg(22), 9.97734, 0.001);  // Tolerância de 0.001
-    return 0;
+void testKmParaMetros() {
+    double resultado = kmParaMetros(2.0);
+    if (resultado == 2000.0) {
+        printf("Teste de kmParaMetros(2.0) passou.\n");
+    } else {
+        printf("Teste de kmParaMetros(2.0) falhou. Resultado: %lf\n", resultado);
+    }
+
+    resultado = kmParaMetros(1.0);
+    if (resultado == 1000.0) {
+        printf("Teste de kmParaMetros(1.0) passou.\n");
+    } else {
+        printf("Teste de kmParaMetros(1.0) falhou. Resultado: %lf\n", resultado);
+    }
+
+    resultado = kmParaMetros(0.5);
+    if (resultado == 500.0) {
+        printf("Teste de kmParaMetros(0.5) passou.\n");
+    } else {
+        printf("Teste de kmParaMetros(0.5) falhou. Resultado: %lf\n", resultado);
+    }
 }
 
 int main() {
-    const struct CMUnitTest tests[] = {
-        cmocka_unit_test(test_kgToLbs),
-        cmocka_unit_test(test_lbsToKg),
-    };
+    testMetrosParaKm();
+    testKmParaMetros();
 
-    return cmocka_run_group_tests(tests, NULL, NULL);
+    return 0;
 }
