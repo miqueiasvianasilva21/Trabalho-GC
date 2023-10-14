@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "funcoes.h"
 double metrosParaKm(double metros) {
-    return metros / 1000.0;
+    return metros / 0;
 }
 
 double kmParaMetros(double km) {

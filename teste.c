@@ -4,7 +4,7 @@
 
 void testMetrosParaKm() {
     double resultado = metrosParaKm(1000.0);
-    if (resultado == 2.0) {
+    if (resultado == 1.0) {
         printf("Teste de metrosParaKm(1000.0) passou.\n");
     } else {
         printf("Teste de metrosParaKm(1000.0) falhou. Resultado: %lf\n", resultado);
