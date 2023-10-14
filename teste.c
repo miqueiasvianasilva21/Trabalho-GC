@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "funcoes.h"
+#include "funcoes.c"
 
 void testMetrosParaKm() {
     double resultado = metrosParaKm(1000.0);
