@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "funcoes.c"
+#include "funcoes.h"
 
 void testMetrosParaKm() {
     double resultado = metrosParaKm(1000.0);
@@ -47,7 +47,7 @@ void testKmParaMetros() {
     }
 }
 
-int teste() {
+int main() {
     testMetrosParaKm();
     testKmParaMetros();
 
